@@ -1,0 +1,10 @@
+def = legacy_code('initialize');
+def.SFunctionName = 'TSH_0_2_RISC_Block';
+def.SourceFiles = {'TSH_0_2_RISC.c'};
+def.HeaderFiles = {'TSH_0_2_RISC.h'};
+%def.LibPaths = {'/home/computation/WRITE/'};
+def.OutputFcnSpec = 'write(single u1[], uint32 u2, int32 u3)';
+legacy_code('sfcn_cmex_generate', def);
+legacy_code('compile', def);
+legacy_code('slblock_generate', def);
+legacy_code('sfcn_tlc_generate',def);
